@@ -6,7 +6,8 @@ async function loadTask() {
   
 }
 
-export const revalidate = 0
+// export const revalidate = 0
+export const dynamic = "force-dinamyc"
 
 async function HomePage() {
   const tasks = await loadTask();
