@@ -31,18 +31,20 @@ export async function PUT(request, { params }) {
 }
 
 export async function DELETE(request, { params }) {
-  const { id } = await params;
+  const { id } = params; // No necesitas await en params
+
+  let taskRemoved; // ✅ Definir taskRemoved antes del try-catch
 
   try {
-    const taskRemoved = await prisma.task.delete({
+    taskRemoved = await prisma.task.delete({
       where: {
         id: Number(id),
       },
     });
     console.log(taskRemoved);
   } catch (error) {
-    return NextResponse.json(error.message);
+    return NextResponse.json({ error: error.message }, { status: 500 });
   }
 
-  return NextResponse.json(taskRemoved);
+  return NextResponse.json(taskRemoved); // ✅ Ahora siempre está definido
 }
