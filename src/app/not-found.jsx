@@ -1,6 +1,5 @@
 import Link from "next/link";
 import React from "react";
-export const dynamic = "force-dinamyc"
 
 function NotFound() {
   return (

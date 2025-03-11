@@ -7,7 +7,7 @@ async function loadTask() {
 }
 
 // export const revalidate = 0
-export const dynamic = "force-dinamyc"
+export const dynamic = "force-dynamic";  // Asegúrate de usar 'force-dynamic' correctamente
 
 async function HomePage() {
   const tasks = await loadTask();

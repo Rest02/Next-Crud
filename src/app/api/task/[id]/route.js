@@ -2,7 +2,6 @@ import { NextResponse } from "next/server";
 import { prisma } from "@/libs/prisma";
 
 
-export const dynamic = "force-dinamyc"
 
 export async function GET(request, { params }) {
   const { id } = await params;
