@@ -3,6 +3,9 @@ import React, { useEffect, useState } from "react";
 import { useRouter, useParams } from "next/navigation";
 import { Bruno_Ace } from "next/font/google";
 
+
+export const dynamic = "force-dinamyc"
+
 function NewPage() {
   const params = useParams();
   const [title, setTitle] = useState("");
