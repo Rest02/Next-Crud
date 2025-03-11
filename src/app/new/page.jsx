@@ -4,6 +4,7 @@ import { useRouter, useParams } from "next/navigation";
 import { Bruno_Ace } from "next/font/google";
 
 
+export const dynamic = "force-dynamic";  // Asegúrate de usar 'force-dynamic' correctamente
 
 function NewPage() {
   const params = useParams();
