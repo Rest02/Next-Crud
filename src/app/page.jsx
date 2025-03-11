@@ -6,6 +6,8 @@ async function loadTask() {
   
 }
 
+export const revalidate = 0
+
 async function HomePage() {
   const tasks = await loadTask();
   return <section className="container mx-auto">
