@@ -33,7 +33,7 @@ export async function PUT(request, { params }) {
 }
 
 export async function DELETE(request, { params }) {
-  const { id } = params; // No necesitas await en params
+  const { id } = await params; // No necesitas await en params
 
   let taskRemoved; // ✅ Definir taskRemoved antes del try-catch
 

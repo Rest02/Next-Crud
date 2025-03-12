@@ -13,7 +13,7 @@ function NewPage() {
 
   useEffect(() => {
     if (params.id) {
-      fetch("http://localhost:3000/api/task/" + Number(params.id))
+      fetch("/api/task/" + Number(params.id))
         .then((res) => res.json())
         .then((data) => {
           setTitle(data.title);
@@ -29,7 +29,7 @@ function NewPage() {
 
     if (params.id) {
       const res = await fetch(
-        "http://localhost:3000/api/task/" + Number(params.id),
+        "/api/task/" + Number(params.id),
         {
           method: "PUT",
           body: JSON.stringify({ title, description }),
@@ -102,7 +102,7 @@ function NewPage() {
               type="button"
               onClick={async () => {
                 const res = await fetch(
-                  `http://localhost:3000/api/task/${params.id}`,
+                  `/api/task/${params.id}`,
                   {
                     method: "DELETE",
                   }
